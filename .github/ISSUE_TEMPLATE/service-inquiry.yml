@@ -1,0 +1,48 @@
+name: 脱敏需求咨询
+description: 提交不含敏感信息的知识库需求摘要
+title: "[需求咨询] "
+labels: ["service-inquiry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本渠道由账户持有人授权的 AI 助理监测。请勿提交密码、密钥、账号、支付资料、客户名单、合同原文或其他敏感信息。
+
+        提交公开需求不等于成交。合同、最终报价和收款由账户持有人本人确认。
+  - type: textarea
+    id: context
+    attributes:
+      label: 业务场景
+      description: 请用非敏感方式说明行业、角色和主要任务。
+    validations:
+      required: true
+  - type: textarea
+    id: documents
+    attributes:
+      label: 资料类型和规模
+      description: 说明 PDF、网页、Word、表格等格式，以及大致数量或范围。
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 最常找不到或重复处理的三类内容
+    validations:
+      required: true
+  - type: dropdown
+    id: privacy
+    attributes:
+      label: 是否要求本地处理
+      options:
+        - 必须本地处理
+        - 可以脱敏后使用外部服务
+        - 尚未确定
+    validations:
+      required: true
+  - type: input
+    id: outcome
+    attributes:
+      label: 希望 7 天内看到的验收结果
+      placeholder: 例如：20 个问题能检索到带来源的原文
+    validations:
+      required: true
