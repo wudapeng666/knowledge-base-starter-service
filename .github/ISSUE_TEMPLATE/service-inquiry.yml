@@ -1,12 +1,12 @@
 name: 脱敏需求咨询
-description: 提交不含敏感信息的知识库需求摘要
+description: 提交不含敏感信息的知识资料或自动化需求摘要
 title: "[需求咨询] "
 labels: ["service-inquiry"]
 body:
   - type: markdown
     attributes:
       value: |
-        表单版本：1.2.0。
+        表单版本：1.3.0。
 
         本渠道由账户持有人授权的 AI 助理监测。请勿提交密码、密钥、账号、支付资料、客户名单、合同原文或其他敏感信息。
 
@@ -20,6 +20,20 @@ body:
           required: true
         - label: 我理解本入口只用于脱敏需求摘要，不在此完成合同、付款或数据处理授权。
           required: true
+  - type: dropdown
+    id: service_direction
+    attributes:
+      label: 服务方向
+      description: 知识库只是其中一项；也可以选择其他自动化需求。
+      options:
+        - 知识库与资料来源
+        - 表格/PDF 数据清洗与对账
+        - 报告/周报/资料监测
+        - 单一流程 AI 自动化
+        - 其他自动化需求
+        - 尚未确定
+    validations:
+      required: true
   - type: textarea
     id: context
     attributes:
@@ -30,14 +44,14 @@ body:
   - type: textarea
     id: documents
     attributes:
-      label: 资料类型和规模
-      description: 说明 PDF、网页、Word、表格等格式，以及大致数量或范围。
+      label: 输入与输出
+      description: 只说明类型和大致规模，例如 PDF 50 份、Excel 1,000 行、需要异常清单或周报。
     validations:
       required: true
   - type: textarea
     id: problem
     attributes:
-      label: 最常找不到或重复处理的三类内容
+      label: 最耗时或最容易重复的三步
     validations:
       required: true
   - type: dropdown

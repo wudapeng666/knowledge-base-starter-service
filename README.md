@@ -1,10 +1,10 @@
-# 私人知识库 7 日启动包
+# 小团队自动化与知识资料服务
 
-把散落在 PDF、网页、笔记和聊天记录里的资料，整理成本地可搜索、带来源、可持续更新的知识库。
+按固定范围交付知识库、表格/PDF 清洗、报告监测和单一流程自动化。知识库是其中一项服务，不是唯一方向。
 
 - 公开服务页：https://wudapeng666.github.io/knowledge-base-starter-service/
-- GitHub 用户可选表单：https://github.com/wudapeng666/knowledge-base-starter-service/issues/new?template=service-inquiry.yml
-- 技术验证：本地 SQLite 检索、来源定位、资料去重、自动归档、知识地图和运行报告
+- 脱敏需求咨询：https://github.com/wudapeng666/knowledge-base-starter-service/issues/new?template=service-inquiry.yml
+- 可验证能力：本地检索、来源定位、表格校验、报告生成、邮件审计和零模型 Token 定时任务
 
 ## 运营披露
 
