@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wudapeng666.github.io/knowledge-base-starter-service/sitemap.xml
