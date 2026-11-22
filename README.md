@@ -3,8 +3,6 @@
 把散落在 PDF、网页、笔记和聊天记录里的资料，整理成本地可搜索、带来源、可持续更新的知识库。
 
 - 公开服务页：https://wudapeng666.github.io/knowledge-base-starter-service/
-- 简单咨询（不需要 GitHub）：https://wudapeng666.github.io/knowledge-base-starter-service/#inquiry
-- 业务邮箱：411545478@qq.com
 - GitHub 用户可选表单：https://github.com/wudapeng666/knowledge-base-starter-service/issues/new?template=service-inquiry.yml
 - 技术验证：本地 SQLite 检索、来源定位、资料去重、自动归档、知识地图和运行报告
 
