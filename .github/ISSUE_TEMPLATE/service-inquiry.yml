@@ -9,6 +9,15 @@ body:
         本渠道由账户持有人授权的 AI 助理监测。请勿提交密码、密钥、账号、支付资料、客户名单、合同原文或其他敏感信息。
 
         提交公开需求不等于成交。合同、最终报价和收款由账户持有人本人确认。
+  - type: checkboxes
+    id: public_notice
+    attributes:
+      label: 公开渠道确认
+      options:
+        - label: 我理解 GitHub 公开 Issue 对互联网可见，不会在此提交敏感个人信息、商业秘密或未授权资料。
+          required: true
+        - label: 我理解本入口只用于脱敏需求摘要，不在此完成合同、付款或数据处理授权。
+          required: true
   - type: textarea
     id: context
     attributes:
@@ -39,10 +48,30 @@ body:
         - 尚未确定
     validations:
       required: true
+  - type: dropdown
+    id: data_class
+    attributes:
+      label: 数据分类（只选类别，不要粘贴内容）
+      options:
+        - 完全公开
+        - 合成或演示数据
+        - 内部资料
+        - 含客户/合同/报价等商业秘密
+        - 含敏感个人信息或受监管数据
+        - 尚不清楚
+    validations:
+      required: true
   - type: input
     id: outcome
     attributes:
       label: 希望 7 天内看到的验收结果
-      placeholder: 例如：20 个问题能检索到带来源的原文
+      placeholder: 例如：20 个问题中至少 16 个在前 5 条找到约定来源，引用覆盖率至少 95%
+    validations:
+      required: true
+  - type: input
+    id: acceptance_questions
+    attributes:
+      label: 可提供的验收问题数量
+      placeholder: 例如：20；暂时没有可写“待定”
     validations:
       required: true
