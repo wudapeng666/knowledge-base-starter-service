@@ -172,6 +172,54 @@ input {
 }
 .contact { padding-bottom: 110px; }
 .contact p { max-width: 760px; }
+.inquiry-form {
+  max-width: 940px;
+  padding: clamp(22px, 4vw, 38px);
+  margin-top: 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 50px rgba(23,33,30,.06);
+}
+.inquiry-form label { display: grid; gap: 8px; font-weight: 750; }
+.inquiry-form label > span:first-child { font-size: 14px; }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+select, textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #aeb8b4;
+  border-radius: 2px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+}
+textarea { resize: vertical; min-height: 118px; }
+.inquiry-form .consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 18px 0;
+  color: #40504b;
+  font-size: 14px;
+  font-weight: 500;
+}
+.consent input { width: auto; margin-top: 5px; }
+.form-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.form-actions button { cursor: pointer; font: inherit; }
+.form-status { min-height: 28px; margin: 16px 0 0; color: var(--teal); }
+.github-option {
+  max-width: 760px;
+  margin-top: 30px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.github-option summary { cursor: pointer; color: var(--teal); font-weight: 750; }
+.github-option p { margin: 12px 0; color: var(--muted); font-size: 14px; }
+.github-option a { color: var(--teal); }
 .fine { color: var(--muted); font-size: 13px; }
 footer {
   padding: 32px 5vw;
@@ -184,6 +232,7 @@ footer p { margin: 4px 0; }
 @media (max-width: 820px) {
   .hero { grid-template-columns: 1fr; padding-top: 64px; }
   .grid.three, .grid.two, .pricing { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
   .pricing .featured { transform: none; }
   section { padding: 62px 0; }
 }
